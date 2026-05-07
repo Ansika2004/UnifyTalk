@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-size-base: 18px;
+  --color-bg: #ffffff;
+  --color-text: #111827;
+  --color-link: #1d4ed8;
+  --color-border: #d1d5db;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* High contrast mode */
+body.high-contrast {
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-link: #ffff00;
+  --color-border: #ffffff;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.high-contrast a {
+  color: #ffff00;
+}
+
+body.high-contrast *:focus {
+  outline: 3px solid #ffff00;
+  outline-offset: 2px;
+}
+
+/* Dark mode */
+body.dark {
+  --color-bg: #121212;
+  --color-text: #e0e0e0;
+  --color-link: #90caf9;
+  --color-border: #333333;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark a {
+  color: #90caf9;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 10000;
+  padding: 0.5rem 1rem;
+  background: #1d4ed8;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  transition: top 0.1s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Ensure minimum touch targets */
+button, a, [role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}

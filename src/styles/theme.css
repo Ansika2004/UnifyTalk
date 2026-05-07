@@ -1,0 +1,140 @@
+/* UnifyTalk Medical — Dark Theme */
+
+:root {
+  --color-bg: #0a0f1e;
+  --color-surface: #0f172a;
+  --color-text: #f1f5f9;
+  --color-text-muted: #64748b;
+  --color-primary: #0ecfb0;
+  --color-border: rgba(255,255,255,0.08);
+  font-size: 16px;
+}
+
+body {
+  background-color: #030712;
+  color: #f1f5f9;
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body.high-contrast {
+  --color-primary: #00ffcc;
+}
+
+body.large-font {
+  font-size: 20px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(14,207,176,0.3); }
+
+/* ── Inputs & selects inside main content ── */
+#main-content input,
+#main-content textarea,
+#main-content select {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  color: #f1f5f9 !important;
+  border-radius: 0.5rem;
+}
+#main-content input:focus,
+#main-content textarea:focus,
+#main-content select:focus {
+  border-color: rgba(14,207,176,0.5) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(14,207,176,0.12) !important;
+}
+#main-content input::placeholder,
+#main-content textarea::placeholder {
+  color: rgba(148,163,184,0.5) !important;
+}
+
+/* ── Tables ── */
+#main-content table { color: #f1f5f9; width: 100%; border-collapse: collapse; }
+#main-content th { color: #64748b; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0.5rem; text-align: left; }
+#main-content td { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 0.5rem; color: #94a3b8; }
+
+/* ── RecordsViewer ── */
+.records-viewer { color: #f1f5f9; font-size: 1rem; }
+.records-viewer h2, .records-viewer h3 { color: #f1f5f9; margin-bottom: 0.75rem; }
+.records-viewer p, .records-viewer label { color: #94a3b8; }
+.records-viewer strong { color: #f1f5f9; }
+.records-viewer a { color: #0ecfb0; }
+
+.accessibility-controls { display: flex; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.accessibility-controls button {
+  padding: 0.4rem 0.875rem; border-radius: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06); color: #94a3b8;
+  cursor: pointer; font-size: 0.82rem; transition: all 0.15s ease;
+}
+.accessibility-controls button:hover {
+  background: rgba(14,207,176,0.1); border-color: rgba(14,207,176,0.3); color: #0ecfb0;
+}
+
+.stale-indicator {
+  padding: 0.625rem 1rem; background: rgba(245,158,11,0.1);
+  border: 1px solid rgba(245,158,11,0.3); border-radius: 0.5rem;
+  color: #fbbf24; font-size: 0.85rem; margin-bottom: 1rem;
+}
+.freshness-indicator {
+  padding: 0.5rem 1rem; background: rgba(14,207,176,0.08);
+  border: 1px solid rgba(14,207,176,0.2); border-radius: 0.5rem;
+  color: #0ecfb0; font-size: 0.82rem; margin-bottom: 1rem;
+}
+
+.upload-section { margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+.upload-section label { color: #94a3b8; font-size: 0.85rem; }
+
+.filters {
+  display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem;
+  padding: 1rem; background: rgba(15,23,42,0.6);
+  border: 1px solid rgba(255,255,255,0.06); border-radius: 0.75rem;
+}
+.filters label {
+  display: flex; flex-direction: column; gap: 0.25rem;
+  font-size: 0.78rem; color: #64748b;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+
+.records-list { list-style: none; padding: 0; margin: 0 0 1.5rem; display: flex; flex-direction: column; gap: 0.375rem; }
+.record-item {
+  width: 100%; text-align: left; padding: 0.75rem 1rem;
+  border-radius: 0.625rem; border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(15,23,42,0.5); color: #94a3b8;
+  cursor: pointer; font-size: 0.875rem; transition: all 0.15s ease;
+}
+.record-item:hover { background: rgba(14,207,176,0.08); border-color: rgba(14,207,176,0.25); color: #f1f5f9; }
+.record-item.selected { background: rgba(14,207,176,0.12); border-color: rgba(14,207,176,0.4); color: #0ecfb0; }
+.record-item strong { color: #f1f5f9; }
+
+.record-detail { padding: 1.25rem; background: rgba(15,23,42,0.7); border: 1px solid rgba(255,255,255,0.07); border-radius: 0.875rem; }
+.record-header h2 { font-size: 1.2rem; color: #f1f5f9; margin-bottom: 0.375rem; }
+.record-header p { font-size: 0.875rem; color: #64748b; margin: 0.2rem 0; }
+.record-header strong { color: #94a3b8; }
+.record-detail button {
+  padding: 0.4rem 0.875rem; border-radius: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05);
+  color: #94a3b8; cursor: pointer; font-size: 0.82rem;
+  margin-right: 0.5rem; margin-bottom: 1rem; transition: all 0.15s ease;
+}
+.record-detail button:hover { background: rgba(14,207,176,0.1); border-color: rgba(14,207,176,0.3); color: #0ecfb0; }
+.record-summary h3, .record-original h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: #475569; margin-bottom: 0.625rem; }
+.record-summary p {
+  color: #f1f5f9 !important; font-size: 1rem; line-height: 1.7;
+  padding: 1rem; background: rgba(14,207,176,0.06);
+  border: 1px solid rgba(14,207,176,0.2); border-radius: 0.625rem;
+}
+
+/* ── SymptomCommunicator ── */
+.symptom-communicator h2 { color: #f1f5f9; margin-bottom: 1rem; }
+.symptom-communicator p { color: #94a3b8; }
+.symptom-communicator label { color: #94a3b8; }
+
+/* ── General headings & text in main content ── */
+#main-content h1, #main-content h2, #main-content h3, #main-content h4 { color: #f1f5f9; }
+#main-content > p, #main-content section > p { color: #94a3b8; }
+#main-content strong { color: #f1f5f9; }

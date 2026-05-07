@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <meta name="description" content="Universal communication platform for people with disabilities" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preconnect to external APIs for faster first-byte time -->
+    <!-- Firebase -->
+    <link rel="preconnect" href="https://firebaseapp.com" />
+    <link rel="dns-prefetch" href="https://firebaseapp.com" />
+    <link rel="preconnect" href="https://firestore.googleapis.com" />
+    <link rel="dns-prefetch" href="https://firestore.googleapis.com" />
+    <link rel="preconnect" href="https://identitytoolkit.googleapis.com" />
+    <link rel="dns-prefetch" href="https://identitytoolkit.googleapis.com" />
+    <!-- ElevenLabs TTS -->
+    <link rel="preconnect" href="https://api.elevenlabs.io" />
+    <link rel="dns-prefetch" href="https://api.elevenlabs.io" />
+    <!-- Claude / Anthropic -->
+    <link rel="preconnect" href="https://api.anthropic.com" />
+    <link rel="dns-prefetch" href="https://api.anthropic.com" />
+
+    <title>UnifyTalk Accessibility</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
